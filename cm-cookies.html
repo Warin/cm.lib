@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cookies test</title>
+</head>
+<body>
+
+CM.Cookie
+<script src="cm-cookies.js"></script>
+<script>
+console.log("cookie: ",document.cookie);
+console.log("cookie.acccept:", CM.Cookie.test());
+console.log("cookie: ",document.cookie);
+console.log("cookie.set: ", CM.Cookie.set("cm-test","lorem ipsum"));
+console.log("cookie: ",document.cookie);
+console.log("cookie.has: ", CM.Cookie.has("cm-test"));
+console.log("cookie.get: ", CM.Cookie.get("cm-test"));
+console.log("cookie.remove: ", CM.Cookie.remove("cm-test"));
+console.log("cookie: ",document.cookie);
+</script>
+</body>
+</html>
