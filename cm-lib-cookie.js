@@ -92,7 +92,8 @@
             return true;
         }
     };
-    var cm=window.CM||{Cookie:Cookie};
+    var cm=window.CM||{};
+        cm.Cookie=Cookie;
     window.CM=cm;
 }(window));
 
