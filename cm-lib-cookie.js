@@ -1,7 +1,7 @@
 /*!
- * CM Cookies
+ * CM Lib Cookie
  * @author      MGA
- * @version     0.2
+ * @version     0.2.1
  */
 /*jslint devel: true, browser: true, sub: true, unparam: true, debug: false, white: true, maxerr: 999, indent: 4 */
 /*global escape, unescape */
