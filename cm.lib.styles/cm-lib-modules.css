@@ -1,7 +1,7 @@
 /**!
  * CM Modules
  * @author MGA
- * @version 0.2
+ * @version 0.2.1
  */
 
 /* @group CM FRAME
@@ -34,6 +34,7 @@
  */
     .cm-mod {display: block;margin-bottom: 20px;background-color: #fff;}
     .cm-mod>.head {padding:20px;border-radius:5px 5px 0 0;}
+    .cm-mod>.head>h2 {margin-bottom: 0;}
     .cm-mod>.body {padding:20px;border-radius:0 0 5px 5px;font-size: 13px;}
     .cm-mod>.body:last-child {border-radius:0 0 5px 5px;}
     .cm-mod>.head+.body {
