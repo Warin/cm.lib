@@ -1,0 +1,85 @@
+/**!
+ * CM Modules
+ * @author MGA
+ * @version 0.2
+ */
+
+/* @group CM FRAME
+ * @description     content wrapper of an empty page
+ */
+    .cm-frame {
+        margin: 20px auto;
+        margin:20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 1px 4px 4px -4px #000000;
+    }
+    .cm-frame>.body {position: relative;min-height: 500px;padding: 20px;}
+    .cm-frame>.head h1 {position: absolute;bottom: 7px;left:160px;color: #f60;font-size: 20px;font-style: italic;margin-right: 75px;}
+    .cm-frame-logo_wrapper {height: 56px;border-bottom: 5px solid #f60;position: relative;}
+    .cm-frame-logo_wrapper>.logo {margin: 16px 0 7px 16px;}
+    .cm-frame-breadcrumbs {
+        padding: 3px 0 7px 18px;
+        font-size: 11px;
+    }
+    .cm-frame-breadcrumbs>a:link {color: #4D4D4D;font-weight: bold;text-decoration: underline;}
+    .cm-frame-breadcrumbs>a:visited {color: #4D4D4D;}
+    .cm-frame-nav_lang {color: #f60;text-transform: uppercase;font-size: 11px;position: absolute;padding: 3px 11px 7px 0;right:0;bottom: 0}
+    .cm-frame-nav_lang>a:link {color: #4D4D4D;margin: 0 1px 0 2px;}
+    .cm-frame-nav_lang>a:visited {color: #4D4D4D;}
+    .cm-frame-nav_lang>a.active {color: #f60;}
+    /* @end */
+/* @group CM MOD
+ * @description     box with header and footer
+ */
+    .cm-mod {display: block;margin-bottom: 20px;background-color: #fff;}
+    .cm-mod>.head {padding:20px;border-radius:5px 5px 0 0;}
+    .cm-mod>.body {padding:20px;border-radius:0 0 5px 5px;font-size: 13px;}
+    .cm-mod>.body:last-child {border-radius:0 0 5px 5px;}
+    .cm-mod>.head+.body {
+        min-height: 50px;
+        background: #fefefe url("data:image/gif;base64,R0lGODlhAQAHAKIAAP7+/v39/eTk5PLy8uvr6/b29vr6+gAAACH5BAAAAAAALAAAAAABAAcAAAMFKDRlAQkAOw==") repeat-x 0 0;
+        background: -webkit-linear-gradient(top, #ededed 0%,#fefefe 7px); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #ededed 0%,#fefefe 7px); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #ededed 0%,#fefefe 7px); /* IE10+ */
+        background: linear-gradient(to bottom, #ededed 0%,#fefefe 7px); /* W3C */
+    }
+    .cm-mod>.foot {border-radius:0 0 5px 5px;}
+    /* @end */
+/* @group CM MOD-Transparent
+ * @inherits        .cm-mod
+ * @description     box with header and footer
+ */
+    .cm-mod-transparent>.head+.body {background: transparent;padding-top: 0;}
+    /* @end */
+/* @group CM MOD-Regular
+ * @inherits        .cm-mod
+ * @description     box with header and footer
+ */
+    .cm-mod-regular {border: 1px solid #ccc;border-radius: 5px;box-shadow: 1px 1px 2px 0 #ccc;}
+    /* @end */
+/* @group CM MOD-Focus
+ * @inherits        .cm-mod
+ * @description     box with header and footer
+ */
+    .cm-mod-focus {border: 1px solid #ccc;border-top:0 none;box-shadow: 1px 1px 2px 0 #ccc;background:#fff url("data:image/gif;base64,R0lGODlhBAAEAIAAAP9mAAAAACH5BAAAAAAALAAAAAAEAAQAAAIEhI8JBQA7") repeat-x 0 0;}
+    .cm-mod-focus>.head {padding-top:24px;}
+    /* @end */
+/* @group CM MOD-form
+ * @inherits        .cm-mod
+ * @description     box with header and footer
+ */
+    .cm-mod-form {border: 1px solid #ccc;border-top: 0 none;border-radius: 5px;box-shadow: 1px 1px 2px 0 #ccc;}
+    .cm-mod-form>.head {border-top: 4px solid #F60;}
+    .cm-mod-form>.body {font-size: 13px;padding:36px 40px;}
+    .cm-mod-form>.head+.body {padding-top: 36px;}
+    .cm-mod-form>.foot {border-top: 1px solid #ccc;background: #efefef;}
+    /* @end */
+/* @group CM MOD-COMPACT */
+    .cm-mod-compact {}
+    .cm-mod-compact>.head {padding: 9px 12px;}
+    .cm-mod-compact>.body {padding: 16px 15px;}
+    .cm-mod-focus.cm-mod-compact>.head {padding-top: 12px;}
+    .cm-mod-focus.cm-mod-compact>.body {padding-top: 17px;}
+/* @end */
+

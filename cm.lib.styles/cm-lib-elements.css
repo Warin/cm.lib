@@ -1,0 +1,61 @@
+/**!
+ * CM Elements
+ * @author MGA
+ * @version 0.1
+ */
+
+/* @group CM Bubble
+ * @description bubble with persona
+ */
+    .cm-bubble {padding: 0 0 92px 28px;background: url("_img/cm-bubble-author.png") no-repeat 0 100%}
+    .cm-bubble-content {border:1px solid #ccc;border-radius: 5px;background: #f5f5f5;position: relative;padding: 10px;}
+    .cm-bubble-content:after {content:url("_img/cm-bubble.png");width: 29px;height: 32px;position: absolute;left:30px;bottom:-27px;}
+    /* @end */
+/* @group CM Ads
+ * @description Ads and pile of ads
+ */
+    .cm-ads {margin: 1px 0 20px 1px;}
+    .cm-ads:after {content:"";display:table;clear:both;}
+    .cm-ads>.cm-ad {width:100%;} 
+    .cm-ads-x2>.cm-ad {width:50%;} 
+    .cm-ads-x3>.cm-ad {width:33%;width: -webkit-calc(100%/3);width:calc(100%/3);} 
+    .cm-ads-x4>.cm-ad {width:25%;} 
+    .cm-ad {
+        display: block;
+        float: left;
+        vertical-align: top;
+        text-align: center;
+        position: relative;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        box-sizing:border-box;
+        font-size: 13px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        margin-left:-1px;
+        margin-top:-1px;
+        box-shadow:0 0 0 2px #fff inset;
+        background: #fff;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#ebebeb); 
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#ebebeb)"; 
+        background: -webkit-linear-gradient(top, #ffffff 0%,#ebebeb 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #ffffff 0%,#ebebeb 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #ffffff 0%,#ebebeb 100%); /* IE10+ */
+        background: linear-gradient(to bottom, #ffffff 0%,#ebebeb 100%); /* W3C */
+    }
+    /* @end */
+/* @group CM STAGE
+ * @description element with double shadow
+ */
+    .cm-stage {position: relative;border: 1px solid #ccc;margin-bottom: 20px;}
+    .cm-stage:before {content:"\00A0";background: url("_img/cm-stage-bgshadl.png") no-repeat 0 0;width: 201px;height: 18px;position:absolute;bottom:-19px;left: 0;}
+    .cm-stage:after {content:"\00A0";background: url("_img/cm-stage-bgshadr.png") no-repeat 0 0;width: 201px;height: 18px;position:absolute;bottom:-19px;right: 0;}
+    /* @end */
+/* @group CM Footer Disclaimer */
+    .cm-footer-disclaimer {clear: both;margin: 20px 0;font-size: 11px;color: #8d8d8d;padding: 0 15px;}
+    .cm-footer-disclaimer a {color:#8d8d8d;}
+    /* @end */
+/* @group CM Footer */
+    .cm-footer {margin: 20px 0;text-align: center;}
+    /* @end */
+

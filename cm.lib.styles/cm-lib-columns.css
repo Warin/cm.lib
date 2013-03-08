@@ -1,0 +1,14 @@
+/**!
+ * CM Columns
+ * @author MGA
+ * @version 0.1
+ */
+
+/* @group CM Columns
+ * @description columns module
+ */
+    .cm-cols {margin: 20px 0;width: 100%;}
+    .cm-cols:before, .cm-cols:after {content:"";display:table;clear:both;}
+    .cm-col {float: left;clear: none;}
+    .cm-cols>.cm-col:last-child {margin-right:0px;}
+    /* @end */

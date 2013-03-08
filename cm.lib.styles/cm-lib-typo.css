@@ -1,0 +1,25 @@
+/**!
+ * CM Typography
+ * @author MGA
+ * @version 0.2
+ */
+
+/* @group Typo & headings */
+    .cm-typo {color: #4d4d4d;font:normal 13px/1.4 Arial,Helvetica,Verdana,sans-serif;}
+    .cm-typo-heading-1, .cm-typo-heading-2, .cm-typo-heading-3 {margin-bottom: 1em;}
+    .cm-typo-heading-1, .ms-WPBody .cm-typo-heading-1 {font-size: 24px;line-height: 1.4;color: #f60;font-weight: normal;margin-bottom: 0.8333em;}
+    .cm-typo-heading-2, .ms-WPBody .cm-typo-heading-2 {font-size: 15px;color: #006;font-weight: bold;}
+    .cm-typo-heading-2>strong {text-transform: uppercase;}
+    .cm-typo-heading-3, .ms-WPBody .cm-typo-heading-3 {font-size: 12px;color: #f60;font-weight: normal;}
+/* @end */
+/* @group Anchors */
+	.cm-typo a, .cm-typo a:link, .cm-typo a:hover {color: #39C;}
+	.cm-typo a:visited, .cm-typo a:active {color: #0072BC;}
+/* @end */
+/* @group Arrowed elements */
+    .cm-list>li,.cm-arrow {list-style-type: none;padding: 0 0 0 15px;position: relative;display: inline-block;}
+    .cm-list>li {display: list-item;text-align: left;}
+    .cm-list>li:before,.cm-arrow:before {position: absolute;content:url("data:image/gif;base64,R0lGODlhBgAKAIABAE1NTf///yH5BAEAAAEALAAAAAAGAAoAAAINBIJhl5tqnkOzRsjgKwA7");width: 6px;height: 10px;left:0;}/*arr_6x10_4d4d4d.gif*/
+    .cm-list>li {line-height: 1;margin-bottom: 13px;}
+/* @end */
+    
