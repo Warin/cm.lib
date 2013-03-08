@@ -7,9 +7,9 @@
 /* @group CM Bubble
  * @description bubble with persona
  */
-    .cm-bubble {padding: 0 0 92px 28px;background: url("_img/cm-lib-bubble-author.png") no-repeat 0 100%}
+    .cm-bubble {padding: 0 0 92px 28px;background: url("_img/cm-lib/bubble-author.png") no-repeat 0 100%}
     .cm-bubble-content {border:1px solid #ccc;border-radius: 5px;background: #f5f5f5;position: relative;padding: 10px;}
-    .cm-bubble-content:after {content:url("_img/cm-lib-bubble.png");width: 29px;height: 32px;position: absolute;left:30px;bottom:-27px;}
+    .cm-bubble-content:after {content:url("_img/cm-lib/bubble.png");width: 29px;height: 32px;position: absolute;left:30px;bottom:-27px;}
     /* @end */
 /* @group CM Ads
  * @description Ads and pile of ads
@@ -48,8 +48,8 @@
  * @description element with double shadow
  */
     .cm-stage {position: relative;border: 1px solid #ccc;margin-bottom: 20px;}
-    .cm-stage:before {content:"\00A0";background: url("_img/cm-lib-stage-bgshadl.png") no-repeat 0 0;width: 201px;height: 18px;position:absolute;bottom:-19px;left: 0;}
-    .cm-stage:after {content:"\00A0";background: url("_img/cm-lib-stage-bgshadr.png") no-repeat 0 0;width: 201px;height: 18px;position:absolute;bottom:-19px;right: 0;}
+    .cm-stage:before {content:"\00A0";background: url("_img/cm-lib/stage-bgshadl.png") no-repeat 0 0;width: 201px;height: 18px;position:absolute;bottom:-19px;left: 0;}
+    .cm-stage:after {content:"\00A0";background: url("_img/cm-lib/stage-bgshadr.png") no-repeat 0 0;width: 201px;height: 18px;position:absolute;bottom:-19px;right: 0;}
     /* @end */
 /* @group CM Footer Disclaimer */
     .cm-footer-disclaimer {clear: both;margin: 20px 0;font-size: 11px;color: #8d8d8d;padding: 0 15px;}
