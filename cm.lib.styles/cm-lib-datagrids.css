@@ -1,0 +1,56 @@
+/**!
+ * CM Datagrids
+ * @author MGA
+ * @version 0.1
+ */
+
+/* @group           CM Datagrid
+ * @description     Generic Datagrid
+ * @markup          .cm-datagrid>table>(thead>tr>th*3>{thead})+(tfoot>tr>td*3>{tfoot})+(tbody>tr*3>(th>tbody)+(td*2>{tbody}))
+ * @markup          .cm-datagrid>table>tr>td.cm-datagrid-focus-column+td*4
+ * @markup          .cm-datagrid>table>tr.cm-datagrid-focus-row>td*5
+ */
+    .cm-datagrid>table {
+        font-size: 12px;
+        color: #4d4d4d;
+        width: 100%;
+        border-collapse:collapse;
+        text-align: center;
+    }
+    .cm-datagrid>table>thead>tr>td, .cm-datagrid>table>thead>tr>th,
+    .cm-datagrid>table>tbody>tr>td, .cm-datagrid>table>tbody>tr>th,
+    .cm-datagrid>table>tfoot>tr>td, .cm-datagrid>table>tfoot>tr>th {
+        vertical-align: middle;
+        padding: 10px 15px 10px 10px;
+    }
+    .cm-datagrid>table>thead>tr>th {
+        color: #333;
+        font-weight: bold;
+        border-bottom: 2px solid #868686;
+    }
+    .cm-datagrid>table>tbody>tr>td, .cm-datagrid>table>tbody>tr>th,
+    .cm-datagrid>table>tfoot>tr>td, .cm-datagrid>table>tfoot>tr>th {
+        background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAHCAQAAABjRe8fAAAAG0lEQVQIHWNhkGKR/Mui+pdF+zeL7h8QqfoXAD2oBwZwQvwkAAAAAElFTkSuQmCC");
+        background-repeat:repeat-x;
+        background-position: 0 0;
+    }
+    .cm-datagrid>table>tbody>tr>th {
+        color: #666;
+        font-weight: bold;
+    }
+    .cm-datagrid>table>tfoot>tr>td, .cm-datagrid>table>tfoot>tr>th {
+        color: #006;
+        font-weight: bold;
+        border-top: 2px solid #F60;
+    }
+    .cm-datagrid-focus-row,.cm-datagrid-focus-row>td,.cm-datagrid-focus-row>th {background-color: #D6EBF5;}
+    .cm-datagrid-focus-column,.cm-datagrid-focus-column>td,.cm-datagrid-focus-column>th {background-color: #FFE0CC !important;color: #f60 !important;}
+    /* @end */
+/* @group           CM Sortable Datagrid
+ * @description     Visual for sortable table
+ * @markup          .cm-datagrid-sortable>table>thead>tr>th.cm-datagrid-sortable-header
+ */
+    .cm-datagrid-sortable-header {position: static;cursor: pointer;background:url("data:image/gif;base64,R0lGODlhEQAJAIABADMzMwAAACH5BAEAAAEALAAAAAARAAkAAAIUjG+Ay+AMnYRIWoqznfrm9HyHAhUAOw==") no-repeat 100% 50%;}
+    .cm-datagrid-sortable-sorted_up {background-image: url("data:image/gif;base64,R0lGODlhEQAEAIABADMzMwAAACH5BAEAAAEALAAAAAARAAQAAAIMjA2pcN3LnAxq2igLADs=");}
+    .cm-datagrid-sortable-sorted_down {background-image: url("data:image/gif;base64,R0lGODlhEQAEAIABADMzMwAAACH5BAEAAAEALAAAAAARAAQAAAIMjG+Ay+AMnYRI2lUAADs=");}
+    /* @end */

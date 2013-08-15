@@ -1,10 +1,10 @@
 /**!
  * CM Button
  * @author MGA
- * @version 0.2
+ * @version 1.0.1
+ * @changelog   2013/06/26 - .cm-button-checked base64 image bugfix
  */
-
-/* @group CM Buttons */
+/* @group           CM Buttons */
     button.cm-button::-moz-focus-inner{padding: 0;border: 0;}
     .cm-button {
         /*resetting default button*/
@@ -55,6 +55,16 @@
         -webkit-box-shadow: 0 1px 2px #ccc;
         box-shadow: 0 1px 2px #ccc;
     }
+    .cm-button:hover {text-decoration: none;}
+    .cm-button:hover span {text-decoration: underline;}
+    .cm-button>span:before, .cm-button>span:after {text-decoration: none !important;}
+    .cm-button-block {width: 100%;}
+    .cm-button-block,.cm-button-block>span {display: block;margin: 0;}
+    .cm-button+.cm-button {margin-left: 20px;}
+    .cm-arrow+.cm-button {vertical-align: middle;margin-left: 20px;}
+    .cm-button-block+.cm-button-block {margin-left: 0px;}
+    /* @end */
+/* @group           CM Primary Buttons */
     .cm-button-primary>span {
         color: #fff;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.22);
@@ -82,7 +92,11 @@
         -webkit-box-shadow: 0 1px 2px #bbb;
         box-shadow: 0 1px 2px #bbb;
     }
+    /* @end */
+/* @group           CM CTA Buttons */
     .cm-button-cta>span {padding-top: 8px;padding-bottom: 8px;}
+    /* @end */
+/* @group           CM Next Buttons */
     /*button with right arrow*/
     .cm-button-next>span {padding-right:30px;padding-left:20px;position: relative;}
     .cm-button-next>span:after {
@@ -97,4 +111,33 @@
     .cm-button-primary.cm-button-next>span:after {
         background-image:url("data:image/gif;base64,R0lGODlhBgAKAIABAP///////yH5BAEAAAEALAAAAAAGAAoAAAINBIJhl5tqnkOzRsjgKwA7");/*arr_6x10_fff.gif*/
     }
-/* @end */
+    /* @end */
+/* @group           CM Prev Buttons */
+    /*button with Left arrow*/
+    .cm-button-prev>span {padding-left:30px;padding-right:20px;position: relative;}
+    .cm-button-prev>span:before {
+        position: absolute;
+        left: 15px;
+        top: 0;
+        width: 6px;
+        height:100%;
+        content:"\00a0";
+        background:url("data:image/gif;base64,R0lGODlhBgAKAIABAGZmZgAAACH5BAEAAAEALAAAAAAGAAoAAAIOjANwqZjG4JONHlfxTQUAOw==") 0 50% no-repeat;/*arr_6x10_666.gif*/
+    }
+    .cm-button-primary.cm-button-prev>span:before {
+        background-image:url("data:image/gif;base64,R0lGODlhBgAKAIABAP///////yH5BAEAAAEALAAAAAAGAAoAAAIOjANwqZjG4JONHlfxTQUAOw==");/*arr_6x10_fff.gif*/
+    }
+    /* @end */
+/* @group           CM Checked Buttons */
+    /*button with check sign*/
+    .cm-button-checked>span {padding-right:20px;padding-left:40px;position: relative;}
+    .cm-button-checked>span:before {
+        position: absolute;
+        left: 15px;
+        top: 0;
+        width: 19px;
+        height:100%;
+        content:"\00a0";
+        background:url("/SiteCollectionImages/cm-check-fff.png") 0 50% no-repeat;
+    }
+    /* @end */

@@ -73,6 +73,8 @@
     </div><!-- .head -->
     <div class="body">
 
+        <h2>MOD TRANSPARENT</h2>
+        <code class="markup">.cm-mod.cm-mod-transparent>(.head>hgroup)+.body+.foot|c</code>
         <div class="cm-mod cm-mod-transparent">
             <div class="head">
                 <hgroup>
@@ -90,30 +92,58 @@
         </div><!-- .cm-mod -->
 
 
+        <h2>MOD REGULAR</h2>
+        <code class="markup">.cm-mod.cm-mod-regular>.head.+.body|c</code>
         <div class="cm-mod cm-mod-regular">
-            <div class="head">head</div><!-- .head -->
-            <div class="body">body</div><!-- .body -->
-        </div><!-- .cm-mod cm-mod-regular -->
-        <div class="cm-mod cm-mod-regular">
-            <div class="body">body</div><!-- .body -->
-        </div><!-- .cm-mod cm-mod-regular -->
-        <div class="cm-mod cm-mod-regular cm-mod-compact">
             <div class="head">head</div><!-- .head -->
             <div class="body">body</div><!-- .body -->
         </div><!-- .cm-mod cm-mod-regular -->
 
+        <code class="markup">.cm-mod.cm-mod-regular>.body|c</code>
+        <div class="cm-mod cm-mod-regular">
+            <div class="body">body</div><!-- .body -->
+        </div><!-- .cm-mod cm-mod-regular -->
+        
+        <code class="markup">.cm-mod.cm-mod-regular.cm-mod-compact>.head.+.body|c</code>
+        <div class="cm-mod cm-mod-regular cm-mod-compact">
+            <div class="head">head</div><!-- .head -->
+            <div class="body">body</div><!-- .body -->
+        </div><!-- .cm-mod cm-mod-regular -->
+        
+        <code class="markup">.cm-mod.cm-mod-regular.cm-mod-compact>.head.+.body+.foot|c</code>
+        <div class="cm-mod cm-mod-regular cm-mod-compact">
+            <div class="head">head</div><!-- .head -->
+            <div class="body">body</div><!-- .body -->
+            <div class="foot">
+                default footer centered (no action)
+            </div><!-- .foot -->
+        </div><!-- .cm-mod cm-mod-regular -->
+
+        <h2>MOD FOCUS</h2>
+        <code class="markup">.cm-mod.cm-mod-focus>.head+.body|c</code>
         <div class="cm-mod cm-mod-focus">
             <div class="head">head</div><!-- .head -->
             <div class="body">body</div><!-- .body -->
         </div><!-- .cm-mod cm-mod-focus -->
+        
+        <code class="markup">.cm-mod.cm-mod-focus>.body|c</code>
         <div class="cm-mod cm-mod-focus">
             <div class="body">body</div><!-- .body -->
         </div><!-- .cm-mod cm-mod-focus -->
+        
+        <code class="markup">.cm-mod.cm-mod-focus.cm-mod-focus-light>.body|c</code>
+        <div class="cm-mod cm-mod-focus cm-mod-focus-light">
+            <div class="body">body</div><!-- .body -->
+        </div><!-- .cm-mod cm-mod-focus -->
+        
+        <code class="markup">.cm-mod.cm-mod-focus.cm-mod-compact>.head.+.body|c</code>
         <div class="cm-mod cm-mod-focus cm-mod-compact">
             <div class="head">head</div><!-- .head -->
             <div class="body">body</div><!-- .body -->
         </div><!-- .cm-mod cm-mod-focus -->
 
+        <h2>MOD FORM</h2>
+        <code class="markup">.cm-mod.cm-mod-form>(.head>hgroup)+.body+(.foot>.cm-mod-actions)|c</code>
         <div class="cm-mod cm-mod-form">
             <div class="head">
                 <hgroup>
@@ -125,12 +155,37 @@
             </div><!-- .body -->
             <div class="foot">
                 <footer>
-                    foot
+                    <div class="cm-mod-actions">
+                        actions (right aligned)
+                    </div>
                 </footer>
             </div><!-- .foot -->
         </div><!-- .cm-mod-form -->
-
         
+        <div class="cm-mod cm-mod-form">
+            <div class="body">
+                body
+            </div><!-- .body -->
+        </div><!-- .cm-mod-form -->
+
+
+
+
+        <h2>MOD DRILLDOWN</h2>
+        <code class="markup">.cm-mod.cm-mod-drilldown>.body|c</code>
+        <div class="cm-mod cm-mod-drilldown">
+            <div class="body">
+                body
+            </div><!-- .body -->
+        </div><!-- .cm-mod.cm-mod-drilldown -->
+
+        <h2>MOD TEASER</h2>
+        <code class="markup">.cm-mod.cm-mod-teaser>(.head)+.body+(.foot)|c</code>
+        <div class="cm-mod cm-mod-teaser">
+            <div class="head">.head</div><!-- .head -->
+            <div class="body">.body</div><!-- .body -->
+            <div class="foot">.foot</div><!-- .foot -->
+        </div><!-- .cm-mod.cm-mod-teaser -->
 
     </div><!-- .body -->
 </div><!-- .cm-frame -->

@@ -7,16 +7,19 @@
 <body>
 
 CM.Cookie
-<script src="cm-lib-cookies.js"></script>
+<script src="cm-lib-cookie.js"></script>
 <script>
 console.log("cookie: ",document.cookie);
 console.log("cookie.acccept:", CM.Cookie.test());
 console.log("cookie: ",document.cookie);
-console.log("cookie.set: ", CM.Cookie.set("cm-test","lorem ipsum"));
+console.log("cookie.set: ", CM.Cookie.set("cm-test","lorem ipsuméà[]"));
+console.log("cookie.set: ", CM.Cookie.set("cm-test-raw","lorem ipsuméà[]",{raw:true}));
 console.log("cookie: ",document.cookie);
 console.log("cookie.has: ", CM.Cookie.has("cm-test"));
 console.log("cookie.get: ", CM.Cookie.get("cm-test"));
+console.log("cookie.get raw: ", CM.Cookie.get("cm-test-raw"));
 console.log("cookie.remove: ", CM.Cookie.remove("cm-test"));
+console.log("cookie.remove: ", CM.Cookie.remove("cm-test-raw"));
 console.log("cookie: ",document.cookie);
 </script>
 </body>

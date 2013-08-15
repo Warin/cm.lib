@@ -1,11 +1,13 @@
 /*!
  * CM Lib Cookie
  * @author      MGA
- * @version     0.2.1
+ * @version     1.0.1
+ * @changelog   2013/07/03 - Cookie.remove(id,{path:"/",domain:""}) fix
+ * @changelog   2013/06/26 - Cookie.remove(id,{path:"/"}) instead of Cookie.remove(id,"/") for consitency
  */
-/*jslint devel: true, browser: true, sub: true, unparam: true, debug: false, white: true, maxerr: 999, indent: 4 */
+/*jslint devel: true, browser: true, sub: true, unparam: true, debug: false, white: true, maxerr: 999, indent: 4, vars: true */
 /*global escape, unescape */
-(function(window,undefined) {
+(function(window) {
     "use strict";
     /**
      * Cookie: cookies reader/writer framework with full unicode support.
@@ -52,7 +54,8 @@
                         break;
                 }
             }
-            document.cookie =   escape(name) + "=" + escape(value) + 
+            document.cookie =   escape(name) + "=" +
+                                ((options&&options.raw) ?  value : escape(value)) +
                                 expire_date + 
                                 ((options&&options.domain) ? "; domain=" + options.domain : "") + 
                                 ((options&&options.path) ? "; path=" + options.path : "") + 
@@ -65,9 +68,9 @@
          * @param  {String} path    optional path of the cookie to be removed
          * @return {Object} Cookie
          */
-        remove:function(name, path){
+        remove:function(name, options){
             if (!name || !this.has(name)) { return; }
-            return this.set(name,undefined,{expires:Infinity,path:(path?"; path="+path:"")});
+            return this.set(name,undefined,{expires:Infinity,path:((options&&options.path)?"; path="+options.path:""),domain:((options&&options.domain)?"; domain="+options.domain:"")});
         },
         /**
          * Check if specified cookie is set
@@ -76,12 +79,12 @@
          */
         has:function(name){
             return (new RegExp("(?:^|;\\s*)" + escape(name).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=")).test(document.cookie);
-        }
+        },
         /**
          * Test if cookies are supported
          * @return {[type]} [description]
          */
-        ,test:function(){
+        test:function(){
             var t=(new Date().getTime())
                 ,uid="cmcookie"+t
                 ,acceptCookies=!!this.set(uid,t).has(uid)

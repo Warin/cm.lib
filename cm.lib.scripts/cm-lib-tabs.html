@@ -15,17 +15,27 @@
 <h1>CM.Tabs</h1>
 
 
+<blockquote style="margin:20px">
+    <strong>Analytics</strong><br />
+    <p>A analytics attribute data-tab-tracker can be placed on the tab where we want tracking</p>
+    <p>ex: <code>&lt;a href="#tab_0-1" <strong>data-tab-tracker='{"DCS.dcsuri":"lorem_tab2","wt.ac":"aze"}'</strong>&gt;tab 0-1&lt;/a&gt;</li></code></p>
+    <p>note the single quote surrounding to have valid JSON</p>
+</blockquote>
+
+<h2>Tabs activated</h2>
+<h3>Automatic tab 1 (default)</h3>
 <div class="cm-tabs">
 	<div class="head">
 		<ul>
-			<li><a href="#tab_0">tab 0</a></li>
-			<li><a href="#tab_1">tab 1</a></li>
-			<li class="active"><a href="#tab_2">tab 2</a></li>
+			<li><a href="#tab_0-0">tab 0-0</a></li>
+			<li><a href="#tab_0-1">tab 0-1</a></li>
+			<li><a href="#tab_0-2">tab 0-2</a></li>
 		</ul>
+        <div class="cm-tabs-head-aside"><a href="#tab_0-2" class="cm-tab-link">Tab 0-2</a></div><!-- .aside -->
 	</div><!-- .head -->
 	<div class="body">
                 
-        <div id="tab_0" class="cm-tab">
+        <div id="tab_0-0" class="cm-tab">
             
             <h2 class="cm-typo-heading-2">Tab 0</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi beatae veniam cum dolorum quos architecto id mollitia ullam sapiente eligendi officiis provident exercitationem ab culpa autem eius enim blanditiis obcaecati.</p>
@@ -35,8 +45,8 @@
                 <a href="#" class="cm-arrow">Lorem ipsum</a>
             </div><!-- .foot -->
 
-        </div><!-- #tab_0 -->
-        <div id="tab_1" class="cm-tab">
+        </div><!-- #tab_0-0 -->
+        <div id="tab_0-1" class="cm-tab">
             
             <h2 class="cm-typo-heading-2">Tab 1</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi beatae veniam cum dolorum quos architecto id mollitia ullam sapiente eligendi officiis provident exercitationem ab culpa autem eius enim blanditiis obcaecati.</p>
@@ -46,8 +56,8 @@
                 <a href="#" class="cm-arrow">Lorem ipsum</a>
             </div><!-- .foot -->
 
-        </div><!-- #tab_1 -->
-        <div id="tab_2" class="cm-tab">
+        </div><!-- #tab_0-1 -->
+        <div id="tab_0-2" class="cm-tab">
             
             <h2 class="cm-typo-heading-2">Tab 2</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi beatae veniam cum dolorum quos architecto id mollitia ullam sapiente eligendi officiis provident exercitationem ab culpa autem eius enim blanditiis obcaecati.</p>
@@ -57,21 +67,22 @@
                 <a href="#" class="cm-arrow">Lorem ipsum</a>
             </div><!-- .foot -->
 
-        </div><!-- #tab_2 -->
+        </div><!-- #tab_0-2 -->
     </div><!-- .body -->
 </div><!-- .cm-tabs -->
 
+<h3>Hardcoded tab 3</h3>
 <div class="cm-tabs">
-	<div class="head">
-		<ul>
-			<li><a href="#tab_0">tab 0</a></li>
-			<li><a href="#tab_1">tab 1</a></li>
-			<li><a href="#tab_2">tab 2</a></li>
-		</ul>
-	</div><!-- .head -->
-	<div class="body">
+    <div class="head">
+        <ul>
+            <li><a href="#tab_1-0">tab 1-0</a></li>
+            <li><a href="#tab_1-1">tab 1-1</a></li>
+            <li class="active"><a href="#tab_1-2">tab 1-2</a></li>
+        </ul>
+    </div><!-- .head -->
+    <div class="body">
                 
-        <div id="tab_0" class="cm-tab">
+        <div id="tab_1-0" class="cm-tab">
             
             <h2 class="cm-typo-heading-2">Tab 0</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi beatae veniam cum dolorum quos architecto id mollitia ullam sapiente eligendi officiis provident exercitationem ab culpa autem eius enim blanditiis obcaecati.</p>
@@ -81,19 +92,19 @@
                 <a href="#" class="cm-arrow">Lorem ipsum</a>
             </div><!-- .foot -->
 
-        </div><!-- #tab_0 -->
-        <div id="tab_1" class="cm-tab">
+        </div><!-- #tab_1-0 -->
+        <div id="tab_1-1" class="cm-tab">
             
             <h2 class="cm-typo-heading-2">Tab 1</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi beatae veniam cum dolorum quos architecto id mollitia ullam sapiente eligendi officiis provident exercitationem ab culpa autem eius enim blanditiis obcaecati.</p>
-            <p>Vel hic dolorem fugit quod eum veniam error tempora voluptates quaerat est velit dolorum eveniet dolor quo voluptatum explicabo voluptatem cum inventore itaque nam mollitia delectus saepe doloremque ratione alias.</p>
+            <p>Vel hic dolorem fugit quod eum veniam error tempora <a href="#tab_2-2" class="cm-tab-link">voluptates</a> quaerat est velit dolorum eveniet dolor quo voluptatum explicabo voluptatem cum inventore itaque nam mollitia delectus saepe doloremque ratione alias.</p>
             
             <div class="foot">
                 <a href="#" class="cm-arrow">Lorem ipsum</a>
             </div><!-- .foot -->
 
-        </div><!-- #tab_1 -->
-        <div id="tab_2" class="cm-tab">
+        </div><!-- #tab_1-1 -->
+        <div id="tab_1-2" class="cm-tab">
             
             <h2 class="cm-typo-heading-2">Tab 2</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi beatae veniam cum dolorum quos architecto id mollitia ullam sapiente eligendi officiis provident exercitationem ab culpa autem eius enim blanditiis obcaecati.</p>
@@ -103,22 +114,23 @@
                 <a href="#" class="cm-arrow">Lorem ipsum</a>
             </div><!-- .foot -->
 
-        </div><!-- #tab_2 -->
+        </div><!-- #tab_1-2 -->
     </div><!-- .body -->
 </div><!-- .cm-tabs -->
 
 
+<h3>JavaScript Tab 2</h3>
 <div id="test" class="cm-tabs">
 	<div class="head">
 		<ul>
-			<li><a href="#tab_0">tab 0</a></li>
-			<li><a href="#tab_1">tab 1</a></li>
-			<li><a href="#tab_2">tab 2</a></li>
+			<li><a href="#tab_2-0">tab 2-0</a></li>
+			<li><a href="#tab_2-1">tab 2-1</a></li>
+			<li><a href="#tab_2-2">tab 2-2</a></li>
 		</ul>
 	</div><!-- .head -->
 	<div class="body">
                 
-        <div id="tab_0" class="cm-tab">
+        <div id="tab_2-0" class="cm-tab">
             
             <h2 class="cm-typo-heading-2">Tab 0</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi beatae veniam cum dolorum quos architecto id mollitia ullam sapiente eligendi officiis provident exercitationem ab culpa autem eius enim blanditiis obcaecati.</p>
@@ -128,8 +140,8 @@
                 <a href="#" class="cm-arrow">Lorem ipsum</a>
             </div><!-- .foot -->
 
-        </div><!-- #tab_0 -->
-        <div id="tab_1" class="cm-tab">
+        </div><!-- #tab_2-0 -->
+        <div id="tab_2-1" class="cm-tab">
             
             <h2 class="cm-typo-heading-2">Tab 1</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi beatae veniam cum dolorum quos architecto id mollitia ullam sapiente eligendi officiis provident exercitationem ab culpa autem eius enim blanditiis obcaecati.</p>
@@ -139,8 +151,8 @@
                 <a href="#" class="cm-arrow">Lorem ipsum</a>
             </div><!-- .foot -->
 
-        </div><!-- #tab_1 -->
-        <div id="tab_2" class="cm-tab">
+        </div><!-- #tab_2-1 -->
+        <div id="tab_2-2" class="cm-tab">
             
             <h2 class="cm-typo-heading-2">Tab 2</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi beatae veniam cum dolorum quos architecto id mollitia ullam sapiente eligendi officiis provident exercitationem ab culpa autem eius enim blanditiis obcaecati.</p>
@@ -150,11 +162,186 @@
                 <a href="#" class="cm-arrow">Lorem ipsum</a>
             </div><!-- .foot -->
 
-        </div><!-- #tab_2 -->
+        </div><!-- #tab_2-2 -->
     </div><!-- .body -->
 </div><!-- .cm-tabs -->
 
+
+<h2>CM Tab with Analytics Tracking</h2>
+<div class="cm-tabs">
+    <div class="head">
+        <ul>
+            <li><a href="#tab_3a-0" data-tab-tracker='{"DCS.dcsuri":"lorem_tab1","wt.ac":"aze"}'>Lorem</a></li>
+            <li><a href="#tab_3a-1" data-tab-tracker='{"DCS.dcsuri":"lorem_tab2","wt.ac":"aze"}'>Ipsum</a></li>
+            <li><a href="#tab_3a-2" data-tab-tracker='{"DCS.dcsuri":"lorem_tab3","wt.ac":"aze"}'>Dolor Sit amet</a></li>
+        </ul>
+    </div><!-- .head -->
+    <div class="body">
+        
+        <div id="tab_3a-0" class="cm-tab">
+            
+            <h2 class="cm-typo-heading-2">ING helpt u sparen!</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi beatae veniam cum dolorum quos architecto id mollitia ullam sapiente eligendi officiis provident exercitationem ab culpa autem eius enim blanditiis obcaecati.</p>
+            <p>Vel hic dolorem fugit quod eum veniam error tempora voluptates quaerat est velit dolorum eveniet dolor quo voluptatum explicabo voluptatem cum inventore itaque nam mollitia delectus saepe doloremque ratione alias.</p>
+            
+            <div class="foot">
+                <a href="#" class="cm-arrow">En savoir plus sur mes épargnes à court termes</a>
+            </div><!-- .foot -->
+
+        </div><!-- #tab_3a-0 -->
+        <div id="tab_3a-1" class="cm-tab"></div><!-- #tab_3a-1 -->
+        <div id="tab_3a-2" class="cm-tab"></div><!-- #tab_3a-2 -->
+    </div><!-- .body -->
+
+</div><!-- .cm-tabs -->
+
+
+<h2>CM Tab with aside content</h2>
+<div class="cm-tabs">
+    <div class="head">
+        <ul>
+            <li><a href="#tab_3-0">Korte termijn</a></li>
+            <li><a href="#tab_3-1">Pensionsparen</a></li>
+            <li><a href="#tab_3-2">Lange termijn</a></li>
+        </ul>
+        <div class="cm-tabs-head-aside">Lorem ipsum</div><!-- .aside -->
+    </div><!-- .head -->
+    <div class="body">
+        
+        <div id="tab_3-0" class="cm-tab">
+            
+            <h2 class="cm-typo-heading-2">ING helpt u sparen!</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi beatae veniam cum dolorum quos architecto id mollitia ullam sapiente eligendi officiis provident exercitationem ab culpa autem eius enim blanditiis obcaecati.</p>
+            <p>Vel hic dolorem fugit quod eum veniam error tempora voluptates quaerat est velit dolorum eveniet dolor quo voluptatum explicabo voluptatem cum inventore itaque nam mollitia delectus saepe doloremque ratione alias.</p>
+            
+            <div class="foot">
+                <a href="#" class="cm-arrow">En savoir plus sur mes épargnes à court termes</a>
+            </div><!-- .foot -->
+
+        </div><!-- #tab_3-0 -->
+        <div id="tab_3-1" class="cm-tab"></div><!-- #tab_3-1 -->
+        <div id="tab_3-2" class="cm-tab"></div><!-- #tab_3-2 -->
+    </div><!-- .body -->
+
+</div><!-- .cm-tabs -->
+
+
+
+<h2>CM Tab with Dynamic Title and Aside</h2>
+<div class="cm-tabs">
+    <div class="head">
+        <ul>
+            <li><a href="#tab_4-0">Korte termijn</a></li>
+            <li><a href="#tab_4-1">Pensionsparen</a></li>
+            <li><a href="#tab_4-2">Pensionsparen</a></li>
+        </ul>
+        <div class="cm-tabs-head-aside">Default value (can be empty)</div><!-- .aside -->
+    </div><!-- .head -->
+    <div class="body">
+        
+        <div id="tab_4-0" class="cm-tab">
+
+            <div class="cm-tab-meta">
+                <div class="cm-tab-meta-title">
+                    Title of tab 1 <em>with html</em>
+                </div><!-- .cm-tab-meta-title -->
+                <div class="cm-tab-meta-aside">
+                    <a href="#">Content of aside</a>
+                </div><!-- .cm-tab-meta-aside -->
+            </div><!-- .cm-tab-meta -->
+            
+            <h2 class="cm-typo-heading-2">ING helpt u sparen!</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi beatae veniam cum dolorum quos architecto id mollitia ullam sapiente eligendi officiis provident exercitationem ab culpa autem eius enim blanditiis obcaecati.</p>
+            <p>Vel hic dolorem fugit quod eum veniam error tempora voluptates quaerat est velit dolorum eveniet dolor quo voluptatum explicabo voluptatem cum inventore itaque nam mollitia delectus saepe doloremque ratione alias.</p>
+            
+            <div class="foot">
+                <a href="#" class="cm-arrow">En savoir plus sur mes épargnes à court termes</a>
+            </div><!-- .foot -->
+
+        </div><!-- #tab_4-0 -->
+        <div id="tab_4-1" class="cm-tab">
+
+            <div class="cm-tab-meta">
+                <div class="cm-tab-meta-title">
+                    Title of tab 2
+                </div><!-- .cm-tab-meta-title -->
+            </div><!-- .cm-tab-meta -->
+
+        </div><!-- #tab_4-1 -->
+        <div id="tab_4-2" class="cm-tab">
+
+            <div class="cm-tab-meta">
+                <div class="cm-tab-meta-title">
+                    Title of tab 3
+                </div><!-- .cm-tab-meta-title -->
+            </div><!-- .cm-tab-meta -->
+
+        </div><!-- #tab_4-2 -->
+    </div><!-- .body -->
+
+</div><!-- .cm-tabs -->
+
+
+
+
+<h2>CM Tab with External Content</h2>
+<div class="cm-tabs">
+    <div class="head">
+        <ul>
+            <li><a href="#tab_5-0">Korte termijn</a></li>
+            <li><a href="#tab_5-1" data-tab-src="lorem.html">Ajax Lorem Ipsum</a></li>
+            <li><a href="#tab_5-2" data-tab-src="lorem.html #test">Ajax targetted data</a></li>
+            <li><a href="#tab_5-3" data-tab-src="ajax/sidecontent/error.html">Error loading ajax</a></li>
+        </ul>
+    </div><!-- .head -->
+    <div class="body">
+        
+        <div id="tab_5-0" class="cm-tab">
+
+            <div class="cm-tab-meta">
+                <div class="cm-tab-meta-title">
+                    Title of tab 1 <em>with html</em>
+                </div><!-- .cm-tab-meta-title -->
+                <div class="cm-tab-meta-aside">
+                    <a href="#">Content of aside</a>
+                </div><!-- .cm-tab-meta-aside -->
+            </div><!-- .cm-tab-meta -->
+            
+            <h2 class="cm-typo-heading-2">ING helpt u sparen!</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi beatae veniam cum dolorum quos architecto id mollitia ullam sapiente eligendi officiis provident exercitationem ab culpa autem eius enim blanditiis obcaecati.</p>
+            <p>Vel hic dolorem fugit quod eum veniam error tempora voluptates quaerat est velit dolorum eveniet dolor quo voluptatum explicabo voluptatem cum inventore itaque nam mollitia delectus saepe doloremque ratione alias.</p>
+            
+            <div class="foot">
+                <a href="#" class="cm-arrow">En savoir plus sur mes épargnes à court termes</a>
+            </div><!-- .foot -->
+
+        </div><!-- #tab_5-0 -->
+        <div id="tab_5-1" class="cm-tab">
+
+        </div><!-- #tab_5-1 -->
+        <div id="tab_5-2" class="cm-tab">
+
+        </div><!-- #tab_5-2 -->
+        <div id="tab_5-3" class="cm-tab">
+
+        </div><!-- #tab_5-3 -->
+    </div><!-- .body -->
+
+</div><!-- .cm-tabs -->
+
+<pre>
+@changelog   2013/08/05 - Added tab content loaded by ajax
+@changelog   2013/07/04 - Added tab meta (dynamic setting of title and aside element)
+@changelog   2013/07/03 - Added aside element 
+@changelog   2013/06/27 - Analytics Tracking
+</pre>
+
 <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="https://www.ing.be/_LAYOUTS/ING_K2/Scripts/webtrends.js"></script>
 <script src="cm-lib-tabs.js"></script>
 <script>
 CM.Tabs.setActive($("#test"),1);

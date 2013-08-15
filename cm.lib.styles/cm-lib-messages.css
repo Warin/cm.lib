@@ -1,0 +1,27 @@
+/**!
+ * CM Messages
+ * @author MGA
+ * @version 1.0.0
+ */
+
+/* @group           CM MSG
+ * @description     box with header and footer
+ * @markup          .cm-msg>.head+.body+.foot|c
+ */
+    .cm-msg {display: block;margin: 20px 0;background: #fff;border: 1px solid #ccc;}
+    .cm-msg>.head {padding:15px 15px 10px;}
+    .cm-msg>.head h2 {margin: 0;}
+    .cm-msg>.body {padding:15px;font-size: inherit;}
+    .cm-msg>.head+.body {padding-top: 0;}
+    .cm-msg>.body>:last-child {margin-bottom: 0;}
+    .cm-msg>.body p {margin: 0}
+    .cm-msg>.body p+p {margin-top: 1em;}
+    /* @end */
+/* @group           CM MSG INFO
+ * @description     msg box blue with icon
+ * @inherits        .cm-msg
+ * @markup          .cm-msg.cm-msg-info>.head+.body+.foot|c
+ */
+    .cm-msg-info {border-color: #c3d8e9;background: #e1f0fc url("/SiteCollectionImages/cm-lib/msg-info.png") no-repeat 13px 13px;padding-left: 30px;}
+    .cm-msg-info>.head+.body {background: transparent;padding-top: 0;}
+    /* @end */
