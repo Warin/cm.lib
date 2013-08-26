@@ -1,12 +1,12 @@
 /*!
  * CM Lib Tabs
  * @author      MGA
- * @version     1.3.1
- * @changelog   2013/08/05 - added external source for tab content
+ * @version     1.4.0
+ * @changelog   2013/08/26 - added external source for tab content (tabs bypass) + animation + history hook (where supported)
+ * @changelog   2013/08/05 - added external source for tab content (via ajax)
  * @changelog   2013/07/26 - added link that trigger tabs activation a[href=#tabid].cm-tab-link
  * @changelog   2013/06/27 - Analytics Tracking
  * @changelog   2013/06/25 - location hash hooks
- * @TODO history hooks
  */
 /*jslint devel: true, browser: true, sub: true, unparam: true, debug: false, white: true, maxerr: 999, indent: 4, vars: true */
 /*global jQuery, escape, unescape, dcsMultiTrack */
@@ -49,6 +49,7 @@
                ,tabMeta:{title:".cm-tab-meta-title",aside:".cm-tab-meta-aside"}
                ,tabLink:".cm-tab-link"
                ,tabLoading:"cm-tab-loading"
+               ,root:$('html,body')
             }
            ,gc=function(str){return "."+str;}
            ,getRoot=function(tab){
@@ -64,7 +65,7 @@
                 return getRoot(tab).find(tab.find("a").attr("href"));
            }
            ,getLinksByHash=function(hash){
-                return $(config.tabs).find(config.tab).find("a[href$='"+hash+"']");
+                return $(config.tabs).find(config.tab).find("a[href^='"+hash+"']");
            }
            ,getMeta=function(tab,meta){
                 return $.trim(tab.find(meta).html());
@@ -85,7 +86,16 @@
                 //no aside
                 var aside=getMeta(getContent(tab),config.tabMeta.aside)||target.data("original-value");
                 return target.html(aside);
-           }
+            }
+           ,animate=function(elm){
+                //animate tabs activation
+                var target = getRoot(elm);
+                config.root.animate({
+                    scrollTop: target.offset().top
+                }, 300, function () {
+                    //window.location.hash = elm.attr("href");
+                });
+            }
         ;
         return {
             /**
@@ -121,7 +131,6 @@
                 setAside(tabActive);
 
                 getContents(tabs).hide().eq(idx).show();
-
                 return tabs;
             }
             /**
@@ -131,14 +140,17 @@
            ,bind:function(){
                 //click on tabs
                 $(config.tabs).find(config.tab).on("click","a",function(e){
-                    e.preventDefault();
                     var link=$(this);
 
-                    //content loaded by ajax
-                    var src=link.data("tabSrc")||false;
-                    if (src){
+                    //links not to an anchor --> no tab activation, load as regular link
+                    var inlineContent=(link.attr("href").indexOf("#")===0);
+                    if (!inlineContent){return true;}
+
+                    //link has tab-src data attribute --> content loaded by ajax
+                    var ajaxContent=link.data("tabSrc")||false;
+                    if (ajaxContent){
                         //set content
-                        getContent(link.parent()).addClass(config.tabLoading).load(src,function(response,status,xhr){
+                        getContent(link.parent()).addClass(config.tabLoading).load(ajaxContent,function(response,status,xhr){
                             //error handling
                             if(status==="error"){$(this).html("Error loading tab: "+xhr.statusText);}
                             $(this).removeClass(config.tabLoading);
@@ -147,7 +159,16 @@
 
                     //activate tab
                     Tabs.setActive(getRoot(link),link.parent().index());
+                    //animate(link);
+                
                     Tracker.track(this);
+
+                    //history hook
+                    if (history.pushState){
+                        history.pushState({"tab":link.attr("href")}, "Tab", link.attr("href"));
+                    }
+                    e.preventDefault();
+                    
                     return false;
                 });
 
@@ -156,6 +177,14 @@
                     e.preventDefault();
                     var links=getLinksByHash($(this).attr("href"));
                     links.trigger("click");
+                });
+
+                //handle history hook
+                $(window).bind("popstate",function(e){
+                    var state=e.originalEvent.state||null;
+                    if (!state){return false;}
+                    var link=$(state.tab);
+                    Tabs.setActive(getRoot(link),link.index());
                 });
             }
             /**
