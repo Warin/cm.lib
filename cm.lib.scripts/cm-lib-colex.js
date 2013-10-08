@@ -1,7 +1,8 @@
 /*
  * CM Lib Collapsable
  * @author      MGA
- * @version     0.1
+ * @version     1.0.1
+ * @revision    20130912    added support for dynamic content
  */
 /*jslint devel: true, browser: true, sub: true, debug: false, white: true, maxerr: 999, indent: 4 */
 /*global jQuery, escape, unescape */
@@ -24,9 +25,10 @@
              * @return {boolean} true
              */
             bind:function(){
-                $(config.wrapper).on("click",config.handle,function(e){
+                $(config.wrapper).find(config.handle).live("click",function(e){
                     e.preventDefault();
-                    getRoot(this).toggleClass(config.colexOpen);
+                    getRoot(this).toggleClass(config.colexOpen);;
+                    return false;
                 });
                 return true;
             }
